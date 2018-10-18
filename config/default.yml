@@ -1,0 +1,9 @@
+ui:
+  name: sachi-ui
+  api:
+    prefix: //localhost:8080/
+server:
+  name: web server
+  http:
+    port: 8081
+

@@ -1,0 +1,1 @@
+export const currency = amount => ((+amount || 0) / 100 ).toFixed(2);

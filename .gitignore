@@ -1,0 +1,23 @@
+/build
+/target
+/dist
+/logs
+
+/tmp
+
+# Eclipse
+/.project
+/.classpath
+/.settings
+
+# Idea
+/.idea
+*.iml
+
+/*.log
+
+node_modules
+bower_components
+
+# /static/js/
+/static

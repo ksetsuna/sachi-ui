@@ -1,0 +1,10 @@
+ui:
+  api:
+    prefix: API_ROOT
+server:
+  http:
+    port:
+      __name: HTTP_PORT
+      __format: json
+mongo:
+  url: MONGO_URL
