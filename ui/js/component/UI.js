@@ -5,17 +5,20 @@ import React from 'react';
 
 import {Provider} from 'react-redux';
 import {HashRouter as Router} from 'react-router-dom';
+import {Button, ButtonGroup, AnchorButton} from '@blueprintjs/core';
 
 
-function UI(props) {
-    return <Provider store={store}>
-        <Router>
-            <div className='app-root'>
+import {ImportView} from '@/module/category/ImportView';
 
+const UI = (props) => <Provider store={store}>
+    <Router>
+        <div className='app-root'>
+            <div className='main-content'>
+                <ImportView/>
             </div>
-        </Router>
-    </Provider>;
-}
+        </div>
+    </Router>
+</Provider>;
 
 
 export default UI;

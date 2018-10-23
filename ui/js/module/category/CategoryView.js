@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 
-export default class CategoryView extends Component {
+export class CategoryView extends Component {
 
 
     render() {
