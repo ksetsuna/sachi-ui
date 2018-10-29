@@ -8,32 +8,37 @@ export const ImportView = (props) => <div className='row'>
         <H5>CMB Import</H5>
 
         <form>
+            <FormGroup label='Import content'>
+                <TextArea fill/>
+            </FormGroup>
+            <ButtonGroup>
+                <Button text='OK'/>
+                <Button text='OK'/>
+                <Button text='OK'/>
+                <Button text='OK'/>
+                <Button text='OK'/>
+                <Button text='Import'/>
+            </ButtonGroup>
+        </form>
 
-            <FormGroup label='Import content'><TextArea fill/></FormGroup></form>
 
-
-
-
-        <ButtonGroup>
-
-
-            <Button/>
-        </ButtonGroup>
         <HTMLTable condensed className='w100'>
             <thead>
             <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
+                <th>交易时间</th>
+                <th>说明</th>
+                <th>入账金额</th>
+                <th>交易地</th>
+                <th>交易金额</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td style={{textAlign: 'right'}}>1</td>
-                <td>śffffffffffffffffffff2</td>
-                <td>3</td>
-                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             </tbody>
         </HTMLTable>
