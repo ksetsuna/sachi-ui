@@ -1,48 +1,30 @@
-import {FormGroup, H5, HTMLTable, TextArea, ButtonGroup, Button} from '@blueprintjs/core';
+import {EntriesView} from '@/module/category/EntriesView';
+import {Button, ButtonGroup, FormGroup, H5, TextArea, Intent} from '@blueprintjs/core';
 import React from 'react';
 
-export const ImportView = (props) => <div className='row'>
-    <div className='col-md'>
+import {parseEntries} from '@/biz/parsers';
+
+import {Field, reduxForm} from 'redux-form';
+
+const TextAreaField = ({input, meta, ...props}) => <TextArea {...input} {...props}/>;
+
+export const ImportView = (props) =>
+
+    <form onSubmit={props.handleSubmit}>
+        <FormGroup label='content'>
+            <Field name='content' component={TextAreaField} fill/>
+        </FormGroup>
+        <ButtonGroup>
+            <Button text='Import' type='submit' intent={Intent.PRIMARY}/>
+        </ButtonGroup>
+    </form>
+;
 
 
-        <H5>CMB Import</H5>
+export default reduxForm({
+    form: 'importForm',
+    onSubmit({content}) {
+        console.log(parseEntries(content));
 
-        <form>
-            <FormGroup label='Import content'>
-                <TextArea fill/>
-            </FormGroup>
-            <ButtonGroup>
-                <Button text='OK'/>
-                <Button text='OK'/>
-                <Button text='OK'/>
-                <Button text='OK'/>
-                <Button text='OK'/>
-                <Button text='Import'/>
-            </ButtonGroup>
-        </form>
-
-
-        <HTMLTable condensed className='w100'>
-            <thead>
-            <tr>
-                <th>交易时间</th>
-                <th>说明</th>
-                <th>入账金额</th>
-                <th>交易地</th>
-                <th>交易金额</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </HTMLTable>
-    </div>
-
-
-</div>;
+    }
+})(ImportView);
